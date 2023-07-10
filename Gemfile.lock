@@ -104,6 +104,7 @@ GEM
     faker (2.20.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    flash (0.0.3)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
     globalid (1.0.0)
@@ -145,6 +146,8 @@ GEM
       railties (>= 3.0)
     msgpack (1.5.1)
     nio4r (2.5.8)
+    nokogiri (1.13.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.4-x86_64-linux)
       racc (~> 1.4)
     pg (1.3.5)
@@ -274,6 +277,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -285,6 +289,7 @@ DEPENDENCIES
   carrierwave
   dotenv-rails
   faker
+  flash
   font-awesome-rails
   jbuilder (~> 2.7)
   jquery-rails
