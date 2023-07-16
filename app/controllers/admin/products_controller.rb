@@ -1,4 +1,9 @@
 class Admin::ProductsController < ApplicationController
+  name = ENV['AUTHENTICATION_NAME']
+  password = ENV['AUTHENTICATION_PASSWORD']
+  Rails.logger.info(name)
+
+    http_basic_authenticate_with name: name, password: password
 
   def index
     @products = Product.order(id: :desc).all
