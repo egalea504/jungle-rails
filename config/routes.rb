@@ -12,7 +12,11 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:create, :show]
 
-  resources :about
+  resources :about 
+
+  resources :users, only: [:new, :create]
+  
+  resources :sessions, only: [:new, :create, :destroy]
 
   namespace :admin do
     root to: 'dashboard#show'
@@ -20,10 +24,10 @@ Rails.application.routes.draw do
     resources :categories, except: [:edit, :update, :show]
   end
 
-  # These routes will be for signup. The first renders a form in the browse, the second will 
-    # receive the form and create a user in our database using the data given to us by the user.
-    get '/signup' => 'users#new'
-    post '/users' => 'users#create'
+  # # These routes will be for signup. The first renders a form in the browse, the second will 
+  #   # receive the form and create a user in our database using the data given to us by the user.
+    # root to: 'users#new'
+    # root to: 'users#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
