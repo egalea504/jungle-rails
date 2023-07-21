@@ -111,3 +111,14 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+.input-group {
+  margin-bottom: 10px; /* Add some space between each input group */
+}
+
+/* If you want the labels and input fields to be on the same line */
+.input-group label,
+.input-group input {
+  display: inline-block;
+  vertical-align: middle;
+}
